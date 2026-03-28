@@ -29,6 +29,38 @@
 		A11111110000000000000020 /* SharedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000009 /* SharedDataManager.swift */; };
 		A11111110000000000000021 /* SnoozeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000021 /* SnoozeGesture.swift */; };
 		A11111110000000000000022 /* SnoozeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000021 /* SnoozeGesture.swift */; };
+		A11111110000000000000030 /* PermissionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000030 /* PermissionManager.swift */; };
+		A11111110000000000000031 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000031 /* WatchConnectivityManager.swift */; };
+		A11111110000000000000032 /* PermissionOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000032 /* PermissionOnboardingView.swift */; };
+		A11111110000000000000033 /* AlarmEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000033 /* AlarmEditView.swift */; };
+		A11111110000000000000034 /* AlarmListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000034 /* AlarmListView.swift */; };
+		A11111110000000000000035 /* AlarmCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000035 /* AlarmCardView.swift */; };
+		A11111110000000000000040 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000040 /* Alarm.swift */; };
+		A11111110000000000000041 /* Alarm+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000041 /* Alarm+Codable.swift */; };
+		A11111110000000000000042 /* Ringtone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000042 /* Ringtone.swift */; };
+		A11111110000000000000043 /* SleepState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000043 /* SleepState.swift */; };
+		A11111110000000000000044 /* SwiftDataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000044 /* SwiftDataConfig.swift */; };
+		A11111110000000000000045 /* WatchMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000045 /* WatchMessage.swift */; };
+		A11111110000000000000050 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000040 /* Alarm.swift */; };
+		A11111110000000000000051 /* Alarm+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000041 /* Alarm+Codable.swift */; };
+		A11111110000000000000052 /* Ringtone.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000042 /* Ringtone.swift */; };
+		A11111110000000000000053 /* SleepState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000043 /* SleepState.swift */; };
+		A11111110000000000000054 /* SwiftDataConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000044 /* SwiftDataConfig.swift */; };
+		A11111110000000000000055 /* WatchMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000045 /* WatchMessage.swift */; };
+		A11111110000000000000060 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000031 /* WatchConnectivityManager.swift */; };
+		A11111110000000000000070 /* AwakeDetectionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000070 /* AwakeDetectionConfig.swift */; };
+		A11111110000000000000071 /* AlarmController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000071 /* AlarmController.swift */; };
+		A11111110000000000000072 /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000072 /* AlarmManager.swift */; };
+		A11111110000000000000073 /* AlarmPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000073 /* AlarmPlayer.swift */; };
+		A11111110000000000000074 /* AwakeDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000074 /* AwakeDetectionService.swift */; };
+		A11111110000000000000075 /* BackgroundSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000075 /* BackgroundSessionManager.swift */; };
+		A11111110000000000000076 /* GestureDetectionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000076 /* GestureDetectionService.swift */; };
+		A11111110000000000000077 /* PerformanceMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000077 /* PerformanceMonitor.swift */; };
+		A11111110000000000000078 /* PerformanceOptimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000078 /* PerformanceOptimizer.swift */; };
+		A11111110000000000000079 /* SensorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000079 /* SensorService.swift */; };
+		A11111110000000000000080 /* SleepMonitorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000080 /* SleepMonitorManager.swift */; };
+		A11111110000000000000081 /* SmartAlarmCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000081 /* SmartAlarmCoordinator.swift */; };
+		A11111110000000000000082 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000082 /* WatchConnectivityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +78,31 @@
 		A12222220000000000000012 /* WatchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentView.swift; sourceTree = "<group>"; };
 		A12222220000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A12222220000000000000021 /* SnoozeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoozeGesture.swift; sourceTree = "<group>"; };
+		A12222220000000000000030 /* PermissionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionManager.swift; sourceTree = "<group>"; };
+		A12222220000000000000031 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		A12222220000000000000032 /* PermissionOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermissionOnboardingView.swift; sourceTree = "<group>"; };
+		A12222220000000000000033 /* AlarmEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmEditView.swift; sourceTree = "<group>"; };
+		A12222220000000000000034 /* AlarmListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmListView.swift; sourceTree = "<group>"; };
+		A12222220000000000000035 /* AlarmCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmCardView.swift; sourceTree = "<group>"; };
+		A12222220000000000000040 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		A12222220000000000000041 /* Alarm+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Alarm+Codable.swift"; sourceTree = "<group>"; };
+		A12222220000000000000042 /* Ringtone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ringtone.swift; sourceTree = "<group>"; };
+		A12222220000000000000043 /* SleepState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepState.swift; sourceTree = "<group>"; };
+		A12222220000000000000044 /* SwiftDataConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataConfig.swift; sourceTree = "<group>"; };
+		A12222220000000000000045 /* WatchMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchMessage.swift; sourceTree = "<group>"; };
+		A12222220000000000000070 /* AwakeDetectionConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwakeDetectionConfig.swift; sourceTree = "<group>"; };
+		A12222220000000000000071 /* AlarmController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmController.swift; sourceTree = "<group>"; };
+		A12222220000000000000072 /* AlarmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
+		A12222220000000000000073 /* AlarmPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmPlayer.swift; sourceTree = "<group>"; };
+		A12222220000000000000074 /* AwakeDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwakeDetectionService.swift; sourceTree = "<group>"; };
+		A12222220000000000000075 /* BackgroundSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundSessionManager.swift; sourceTree = "<group>"; };
+		A12222220000000000000076 /* GestureDetectionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureDetectionService.swift; sourceTree = "<group>"; };
+		A12222220000000000000077 /* PerformanceMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceMonitor.swift; sourceTree = "<group>"; };
+		A12222220000000000000078 /* PerformanceOptimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformanceOptimizer.swift; sourceTree = "<group>"; };
+		A12222220000000000000079 /* SensorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorService.swift; sourceTree = "<group>"; };
+		A12222220000000000000080 /* SleepMonitorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SleepMonitorManager.swift; sourceTree = "<group>"; };
+		A12222220000000000000081 /* SmartAlarmCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartAlarmCoordinator.swift; sourceTree = "<group>"; };
+		A12222220000000000000082 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
 		A13333330000000000000001 /* SmartSleepAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartSleepAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13333330000000000000002 /* SmartSleepAlarmWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartSleepAlarmWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14444440000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -87,6 +144,8 @@
 			children = (
 				A12222220000000000000001 /* SmartSleepAlarmApp.swift */,
 				A12222220000000000000002 /* ContentView.swift */,
+				A16666660000000000000010 /* Services */,
+				A16666660000000000000011 /* Views */,
 				A12222220000000000000010 /* Assets.xcassets */,
 				A14444440000000000000001 /* Info.plist */,
 				A14444440000000000000002 /* SmartSleepAlarm.entitlements */,
@@ -99,6 +158,8 @@
 			children = (
 				A12222220000000000000011 /* SmartSleepAlarmWatchApp.swift */,
 				A12222220000000000000012 /* WatchContentView.swift */,
+				A16666660000000000000020 /* Models */,
+				A16666660000000000000021 /* Services */,
 				A12222220000000000000013 /* Assets.xcassets */,
 				A14444440000000000000003 /* Info.plist */,
 				A14444440000000000000004 /* SmartSleepAlarmWatch.entitlements */,
@@ -133,6 +194,12 @@
 				A12222220000000000000004 /* AlarmSettings.swift */,
 				A12222220000000000000005 /* UserProfile.swift */,
 				A12222220000000000000021 /* SnoozeGesture.swift */,
+				A12222220000000000000040 /* Alarm.swift */,
+				A12222220000000000000041 /* Alarm+Codable.swift */,
+				A12222220000000000000042 /* Ringtone.swift */,
+				A12222220000000000000043 /* SleepState.swift */,
+				A12222220000000000000044 /* SwiftDataConfig.swift */,
+				A12222220000000000000045 /* WatchMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -158,6 +225,61 @@
 			isa = PBXGroup;
 			children = (
 				A12222220000000000000009 /* SharedDataManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A16666660000000000000010 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A12222220000000000000030 /* PermissionManager.swift */,
+				A12222220000000000000031 /* WatchConnectivityManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A16666660000000000000011 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A12222220000000000000032 /* PermissionOnboardingView.swift */,
+				A12222220000000000000033 /* AlarmEditView.swift */,
+				A12222220000000000000034 /* AlarmListView.swift */,
+				A16666660000000000000012 /* Components */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A16666660000000000000012 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A12222220000000000000035 /* AlarmCardView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A16666660000000000000020 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A12222220000000000000070 /* AwakeDetectionConfig.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A16666660000000000000021 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A12222220000000000000071 /* AlarmController.swift */,
+				A12222220000000000000072 /* AlarmManager.swift */,
+				A12222220000000000000073 /* AlarmPlayer.swift */,
+				A12222220000000000000074 /* AwakeDetectionService.swift */,
+				A12222220000000000000075 /* BackgroundSessionManager.swift */,
+				A12222220000000000000076 /* GestureDetectionService.swift */,
+				A12222220000000000000077 /* PerformanceMonitor.swift */,
+				A12222220000000000000078 /* PerformanceOptimizer.swift */,
+				A12222220000000000000079 /* SensorService.swift */,
+				A12222220000000000000080 /* SleepMonitorManager.swift */,
+				A12222220000000000000081 /* SmartAlarmCoordinator.swift */,
+				A12222220000000000000082 /* WatchConnectivityManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -271,6 +393,18 @@
 				A11111110000000000000008 /* DateExtensions.swift in Sources */,
 				A11111110000000000000009 /* SharedDataManager.swift in Sources */,
 				A11111110000000000000021 /* SnoozeGesture.swift in Sources */,
+				A11111110000000000000030 /* PermissionManager.swift in Sources */,
+				A11111110000000000000031 /* WatchConnectivityManager.swift in Sources */,
+				A11111110000000000000032 /* PermissionOnboardingView.swift in Sources */,
+				A11111110000000000000033 /* AlarmEditView.swift in Sources */,
+				A11111110000000000000034 /* AlarmListView.swift in Sources */,
+				A11111110000000000000035 /* AlarmCardView.swift in Sources */,
+				A11111110000000000000040 /* Alarm.swift in Sources */,
+				A11111110000000000000041 /* Alarm+Codable.swift in Sources */,
+				A11111110000000000000042 /* Ringtone.swift in Sources */,
+				A11111110000000000000043 /* SleepState.swift in Sources */,
+				A11111110000000000000044 /* SwiftDataConfig.swift in Sources */,
+				A11111110000000000000045 /* WatchMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +422,26 @@
 				A11111110000000000000019 /* DateExtensions.swift in Sources */,
 				A11111110000000000000020 /* SharedDataManager.swift in Sources */,
 				A11111110000000000000022 /* SnoozeGesture.swift in Sources */,
+				A11111110000000000000050 /* Alarm.swift in Sources */,
+				A11111110000000000000051 /* Alarm+Codable.swift in Sources */,
+				A11111110000000000000052 /* Ringtone.swift in Sources */,
+				A11111110000000000000053 /* SleepState.swift in Sources */,
+				A11111110000000000000054 /* SwiftDataConfig.swift in Sources */,
+				A11111110000000000000055 /* WatchMessage.swift in Sources */,
+				A11111110000000000000060 /* WatchConnectivityManager.swift in Sources */,
+				A11111110000000000000070 /* AwakeDetectionConfig.swift in Sources */,
+				A11111110000000000000071 /* AlarmController.swift in Sources */,
+				A11111110000000000000072 /* AlarmManager.swift in Sources */,
+				A11111110000000000000073 /* AlarmPlayer.swift in Sources */,
+				A11111110000000000000074 /* AwakeDetectionService.swift in Sources */,
+				A11111110000000000000075 /* BackgroundSessionManager.swift in Sources */,
+				A11111110000000000000076 /* GestureDetectionService.swift in Sources */,
+				A11111110000000000000077 /* PerformanceMonitor.swift in Sources */,
+				A11111110000000000000078 /* PerformanceOptimizer.swift in Sources */,
+				A11111110000000000000079 /* SensorService.swift in Sources */,
+				A11111110000000000000080 /* SleepMonitorManager.swift in Sources */,
+				A11111110000000000000081 /* SmartAlarmCoordinator.swift in Sources */,
+				A11111110000000000000082 /* WatchConnectivityManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
