@@ -134,11 +134,21 @@ final class Alarm {
 }
 
 extension Alarm {
-    static let defaultRingtones = [
+    static let defaultRingtones: [String: String] = [
         "default": "默认铃声",
-        "gentle": "轻柔铃声",
-        "nature": "自然之声",
-        "classic": "经典闹铃",
-        "digital": "数字铃声"
+        "gentle_wake": "轻柔唤醒",
+        "morning_breeze": "晨风",
+        "sunrise": "日出",
+        "birds_chirping": "鸟鸣",
+        "ocean_waves": "海浪",
+        "forest_stream": "林间溪流",
+        "classic_alarm": "经典闹铃",
+        "digital_beep": "电子蜂鸣",
+        "piano_melody": "钢琴旋律",
+        "guitar_strum": "吉他弹奏",
+        "wind_chimes": "风铃",
+        "temple_bell": "寺庙钟声",
+        "crystal_clear": "清脆水晶",
+        "soft_chime": "柔和铃声"
     ]
 }

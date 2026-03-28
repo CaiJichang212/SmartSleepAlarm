@@ -11,6 +11,7 @@ struct AlarmEditView: View {
     @State private var label: String
     @State private var isSmartModeEnabled: Bool
     @State private var snoozeInterval: Int
+    @State private var snoozeGesture: SnoozeGesture
     
     private let alarm: Alarm?
     private let onSave: ((Alarm) -> Void)?
@@ -35,6 +36,7 @@ struct AlarmEditView: View {
         _label = State(initialValue: alarm?.label ?? "")
         _isSmartModeEnabled = State(initialValue: alarm?.isSmartModeEnabled ?? false)
         _snoozeInterval = State(initialValue: alarm?.snoozeInterval ?? 5)
+        _snoozeGesture = State(initialValue: alarm?.snoozeGesture ?? .snap)
     }
     
     var body: some View {
@@ -164,6 +166,16 @@ struct AlarmEditView: View {
                 in: 1...30
             )
             
+            Picker("贪睡手势", selection: $snoozeGesture) {
+                ForEach(SnoozeGesture.allCases, id: \.self) { gesture in
+                    HStack {
+                        Image(systemName: gesture.icon)
+                        Text(gesture.displayName)
+                    }
+                    .tag(gesture)
+                }
+            }
+            
             HStack {
                 Text("当前间隔")
                 Spacer()
@@ -193,6 +205,7 @@ struct AlarmEditView: View {
             existingAlarm.label = label
             existingAlarm.isSmartModeEnabled = isSmartModeEnabled
             existingAlarm.snoozeInterval = snoozeInterval
+            existingAlarm.snoozeGesture = snoozeGesture
             existingAlarm.updateTimestamp()
             alarmToSave = existingAlarm
         } else {
@@ -202,7 +215,8 @@ struct AlarmEditView: View {
                 ringtone: selectedRingtone,
                 label: label,
                 isSmartModeEnabled: isSmartModeEnabled,
-                snoozeInterval: snoozeInterval
+                snoozeInterval: snoozeInterval,
+                snoozeGesture: snoozeGesture
             )
             modelContext.insert(newAlarm)
             alarmToSave = newAlarm

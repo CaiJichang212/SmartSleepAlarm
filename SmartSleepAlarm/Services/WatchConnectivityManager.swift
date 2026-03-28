@@ -1,5 +1,6 @@
 import Foundation
 import WatchConnectivity
+import SwiftData
 
 @MainActor
 class WatchConnectivityManager: NSObject, ObservableObject {
@@ -52,7 +53,22 @@ class WatchConnectivityManager: NSObject, ObservableObject {
             return
         }
         
-        let syncData = alarms.map { AlarmSyncData(from: $0) }
+        let syncData = alarms.map { alarm in
+            AlarmSyncData(
+                id: alarm.id,
+                time: alarm.time,
+                repeatDays: alarm.repeatDays,
+                ringtone: alarm.ringtone,
+                label: alarm.label,
+                isEnabled: alarm.isEnabled,
+                isSmartModeEnabled: alarm.isSmartModeEnabled,
+                snoozeInterval: alarm.snoozeInterval,
+                snoozeGesture: alarm.snoozeGesture,
+                createdAt: alarm.createdAt,
+                updatedAt: alarm.updatedAt
+            )
+        }
+        
         let payload = AlarmsSyncPayload(alarms: syncData, syncReason: reason)
         
         guard let payloadData = try? JSONEncoder().encode(payload) else {
@@ -278,11 +294,25 @@ class WatchConnectivityManager: NSObject, ObservableObject {
     func updateApplicationContext(alarms: [Alarm]) {
         guard let session = session else { return }
         
-        let syncData = alarms.map { AlarmSyncData(from: $0) }
+        let syncData = alarms.map { alarm in
+            AlarmSyncData(
+                id: alarm.id,
+                time: alarm.time,
+                repeatDays: alarm.repeatDays,
+                ringtone: alarm.ringtone,
+                label: alarm.label,
+                isEnabled: alarm.isEnabled,
+                isSmartModeEnabled: alarm.isSmartModeEnabled,
+                snoozeInterval: alarm.snoozeInterval,
+                snoozeGesture: alarm.snoozeGesture,
+                createdAt: alarm.createdAt,
+                updatedAt: alarm.updatedAt
+            )
+        }
+        
         let payload = AlarmsSyncPayload(alarms: syncData, syncReason: .automatic)
         
-        guard let payloadData = try? JSONEncoder().encode(payload),
-              let context = try? JSONDecoder().decode([String: Data].self, from: payloadData) else {
+        guard let payloadData = try? JSONEncoder().encode(payload) else {
             return
         }
         
@@ -396,21 +426,5 @@ extension WatchConnectivityManager: WCSessionDelegate {
             self.lastSyncTime = Date()
             print("Received application context with \(payload.alarms.count) alarms")
         }
-    }
-}
-
-extension AlarmSyncData {
-    init(from alarm: Alarm) {
-        self.id = alarm.id
-        self.time = alarm.time
-        self.repeatDays = alarm.repeatDays
-        self.ringtone = alarm.ringtone
-        self.label = alarm.label
-        self.isEnabled = alarm.isEnabled
-        self.isSmartModeEnabled = alarm.isSmartModeEnabled
-        self.snoozeInterval = alarm.snoozeInterval
-        self.snoozeGesture = alarm.snoozeGesture
-        self.createdAt = alarm.createdAt
-        self.updatedAt = alarm.updatedAt
     }
 }

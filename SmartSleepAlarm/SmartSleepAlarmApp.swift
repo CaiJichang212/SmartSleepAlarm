@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 @main
 struct SmartSleepAlarmApp: App {
@@ -18,5 +19,6 @@ struct SmartSleepAlarmApp: App {
                 })
             }
         }
+        .modelContainer(SwiftDataConfig.modelContainer)
     }
 }

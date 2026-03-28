@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct AlarmCardView: View {
     let alarm: Alarm

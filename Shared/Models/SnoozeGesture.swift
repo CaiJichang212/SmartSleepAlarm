@@ -5,20 +5,33 @@ enum SnoozeGesture: String, Codable, CaseIterable {
     case wristFlip = "手腕翻转"
     
     var displayName: String {
-        rawValue
+        return self.rawValue
     }
     
     var icon: String {
         switch self {
-        case .snap: return "hand.tap"
-        case .wristFlip: return "hand.raised"
+        case .snap:
+            return "hand.tap"
+        case .wristFlip:
+            return "hand.raised"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .snap:
+            return "用佩戴手表的手打响指"
+        case .wristFlip:
+            return "快速翻转手腕"
         }
     }
     
     var instruction: String {
         switch self {
-        case .snap: return "打响指以贪睡"
-        case .wristFlip: return "翻转手腕以贪睡"
+        case .snap:
+            return "打响指贪睡"
+        case .wristFlip:
+            return "翻转手腕贪睡"
         }
     }
 }
