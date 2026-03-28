@@ -1,57 +1,8 @@
 {
   "images" : [
     {
-      "idiom" : "watch",
-      "role" : "appLauncher",
-      "scale" : "2x",
-      "size" : "22x22",
-      "subtype" : "38mm"
-    },
-    {
-      "idiom" : "watch",
-      "role" : "appLauncher",
-      "scale" : "2x",
-      "size" : "24x24",
-      "subtype" : "40mm"
-    },
-    {
-      "idiom" : "watch",
-      "role" : "appLauncher",
-      "scale" : "2x",
-      "size" : "27.5x27.5",
-      "subtype" : "41mm"
-    },
-    {
-      "idiom" : "watch",
-      "role" : "appLauncher",
-      "scale" : "2x",
-      "size" : "29x29",
-      "subtype" : "42mm"
-    },
-    {
-      "idiom" : "watch",
-      "role" : "appLauncher",
-      "scale" : "2x",
-      "size" : "30x30",
-      "subtype" : "44mm"
-    },
-    {
-      "idiom" : "watch",
-      "role" : "appLauncher",
-      "scale" : "2x",
-      "size" : "32x32",
-      "subtype" : "45mm"
-    },
-    {
-      "idiom" : "watch",
-      "role" : "appLauncher",
-      "scale" : "2x",
-      "size" : "33x33",
-      "subtype" : "49mm"
-    },
-    {
-      "idiom" : "watch-marketing",
-      "scale" : "1x",
+      "idiom" : "universal",
+      "platform" : "watchos",
       "size" : "1024x1024"
     }
   ],
