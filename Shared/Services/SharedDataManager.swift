@@ -1,5 +1,4 @@
 import Foundation
-import SwiftData
 
 enum AlarmSyncKey: String {
     case alarms = "synced_alarms"
