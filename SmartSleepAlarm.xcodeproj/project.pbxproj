@@ -27,6 +27,8 @@
 		A11111110000000000000018 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000007 /* AppConstants.swift */; };
 		A11111110000000000000019 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000008 /* DateExtensions.swift */; };
 		A11111110000000000000020 /* SharedDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000009 /* SharedDataManager.swift */; };
+		A11111110000000000000021 /* SnoozeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000021 /* SnoozeGesture.swift */; };
+		A11111110000000000000022 /* SnoozeGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12222220000000000000021 /* SnoozeGesture.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,7 @@
 		A12222220000000000000011 /* SmartSleepAlarmWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSleepAlarmWatchApp.swift; sourceTree = "<group>"; };
 		A12222220000000000000012 /* WatchContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchContentView.swift; sourceTree = "<group>"; };
 		A12222220000000000000013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A12222220000000000000021 /* SnoozeGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnoozeGesture.swift; sourceTree = "<group>"; };
 		A13333330000000000000001 /* SmartSleepAlarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartSleepAlarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A13333330000000000000002 /* SmartSleepAlarmWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartSleepAlarmWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14444440000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 				A12222220000000000000003 /* SleepData.swift */,
 				A12222220000000000000004 /* AlarmSettings.swift */,
 				A12222220000000000000005 /* UserProfile.swift */,
+				A12222220000000000000021 /* SnoozeGesture.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -203,7 +207,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1500;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					A17777770000000000000001 = {
 						CreatedOnToolsVersion = 15.0;
@@ -266,6 +270,7 @@
 				A11111110000000000000007 /* AppConstants.swift in Sources */,
 				A11111110000000000000008 /* DateExtensions.swift in Sources */,
 				A11111110000000000000009 /* SharedDataManager.swift in Sources */,
+				A11111110000000000000021 /* SnoozeGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +287,7 @@
 				A11111110000000000000018 /* AppConstants.swift in Sources */,
 				A11111110000000000000019 /* DateExtensions.swift in Sources */,
 				A11111110000000000000020 /* SharedDataManager.swift in Sources */,
+				A11111110000000000000022 /* SnoozeGesture.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +299,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -356,6 +363,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -487,7 +495,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartSleepAlarmWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SmartSleep;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.smartsleep.alarm;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -518,7 +526,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SmartSleepAlarmWatch/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SmartSleep;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.smartsleep.alarm;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -538,15 +546,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A1CCCCCCC00000000000001 /* Build configuration list for PBXProject "SmartSleepAlarm" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A1DDDDDDD00000000000001 /* Debug */,
-				A1DDDDDDD00000000000002 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		A18888880000000000000001 /* Build configuration list for PBXNativeTarget "SmartSleepAlarm" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -561,6 +560,15 @@
 			buildConfigurations = (
 				A1EEEEEEE00000000000003 /* Debug */,
 				A1EEEEEEE00000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1CCCCCCC00000000000001 /* Build configuration list for PBXProject "SmartSleepAlarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1DDDDDDD00000000000001 /* Debug */,
+				A1DDDDDDD00000000000002 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
