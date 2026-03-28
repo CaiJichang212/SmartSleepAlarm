@@ -1,6 +1,7 @@
 import Foundation
 import HealthKit
 import UserNotifications
+import UIKit
 
 enum PermissionType {
     case healthKit

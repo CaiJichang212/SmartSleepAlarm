@@ -17,6 +17,7 @@ enum SwiftDataConfig {
         }
     }()
     
+    @MainActor
     static var modelContext: ModelContext {
         modelContainer.mainContext
     }
