@@ -47,6 +47,11 @@ class SharedDataManager {
         }
     }
     
+    func syncAlarms(_ alarms: [Alarm]) {
+        let syncData = alarms.map { AlarmSyncData(from: $0) }
+        syncAlarms(syncData)
+    }
+    
     func loadSyncedAlarms() -> [AlarmSyncData]? {
         guard let data = defaults?.data(forKey: AlarmSyncKey.alarms.rawValue),
               let alarms = try? JSONDecoder().decode([AlarmSyncData].self, from: data) else {
@@ -122,9 +127,39 @@ struct AlarmSyncData: Codable, Identifiable {
         self.createdAt = createdAt
         self.updatedAt = updatedAt
     }
+    
+    init(from alarm: Alarm) {
+        self.id = alarm.id
+        self.time = alarm.time
+        self.repeatDays = alarm.repeatDays
+        self.ringtone = alarm.ringtone
+        self.label = alarm.label
+        self.isEnabled = alarm.isEnabled
+        self.isSmartModeEnabled = alarm.isSmartModeEnabled
+        self.snoozeInterval = alarm.snoozeInterval
+        self.snoozeGestureRawValue = alarm.snoozeGesture.rawValue
+        self.createdAt = alarm.createdAt
+        self.updatedAt = alarm.updatedAt
+    }
+    
+    func toAlarm() -> Alarm {
+        Alarm(
+            id: id,
+            time: time,
+            repeatDays: repeatDays,
+            ringtone: ringtone,
+            label: label,
+            isEnabled: isEnabled,
+            isSmartModeEnabled: isSmartModeEnabled,
+            snoozeInterval: snoozeInterval,
+            snoozeGesture: snoozeGesture,
+            createdAt: createdAt,
+            updatedAt: updatedAt
+        )
+    }
 }
 
-enum AlarmChangeType: String, Codable {
+enum AlarmChangeType: String, Codable, CaseIterable {
     case add
     case update
     case delete
@@ -141,6 +176,13 @@ struct AlarmChange: Codable {
         self.type = type
         self.timestamp = Date()
         self.alarmData = syncData
+    }
+    
+    init(type: AlarmChangeType, alarm: Alarm) {
+        self.id = alarm.id
+        self.type = type
+        self.timestamp = Date()
+        self.alarmData = AlarmSyncData(from: alarm)
     }
     
     init(deleteAlarmId id: UUID) {

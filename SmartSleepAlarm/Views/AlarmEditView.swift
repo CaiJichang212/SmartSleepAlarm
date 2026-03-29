@@ -246,6 +246,6 @@ struct AlarmEditView: View {
         isSmartModeEnabled: true,
         snoozeInterval: 10
     )
-    return AlarmEditView(alarm: alarm)
+    AlarmEditView(alarm: alarm)
         .modelContainer(for: Alarm.self, inMemory: true)
 }

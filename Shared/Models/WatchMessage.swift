@@ -1,6 +1,6 @@
 import Foundation
 
-enum WatchMessageType: String, Codable {
+enum WatchMessageType: String, Codable, CaseIterable {
     case alarmDataSync
     case alarmStateUpdate
     case snoozeSettingsSync
@@ -65,7 +65,7 @@ struct AlarmStateInfo: Codable {
     }
 }
 
-enum AlarmSyncState: String, Codable {
+enum AlarmSyncState: String, Codable, CaseIterable {
     case idle
     case scheduled
     case triggered
@@ -102,7 +102,7 @@ struct AlarmsSyncPayload: Codable {
     }
 }
 
-enum SyncReason: String, Codable {
+enum SyncReason: String, Codable, CaseIterable {
     case manual
     case automatic
     case onConnect

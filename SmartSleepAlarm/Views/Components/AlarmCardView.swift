@@ -106,7 +106,7 @@ struct AlarmCardView: View {
         isSmartModeEnabled: false
     )
     
-    return VStack(spacing: 16) {
+    VStack(spacing: 16) {
         AlarmCardView(alarm: alarm1, onToggle: { _ in }, onTap: {})
         AlarmCardView(alarm: alarm2, onToggle: { _ in }, onTap: {})
     }

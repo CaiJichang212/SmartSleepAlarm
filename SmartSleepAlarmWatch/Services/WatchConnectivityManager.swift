@@ -232,12 +232,21 @@ class WatchConnectivityManager: NSObject, ObservableObject {
             return ConnectionStatusInfo(isConnected: false, isReachable: false)
         }
         
+        #if os(watchOS)
+        return ConnectionStatusInfo(
+            isConnected: session.activationState == .activated,
+            isReachable: session.isReachable,
+            lastActiveDate: lastSyncTime,
+            pairedDeviceName: "iPhone"
+        )
+        #else
         return ConnectionStatusInfo(
             isConnected: session.activationState == .activated,
             isReachable: session.isReachable,
             lastActiveDate: lastSyncTime,
             pairedDeviceName: session.isPaired ? "iPhone" : nil
         )
+        #endif
     }
     
     func getAlarm(by id: UUID) -> AlarmSyncData? {
@@ -282,7 +291,11 @@ extension WatchConnectivityManager: WCSessionDelegate {
     nonisolated func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         Task { @MainActor in
             self.isSessionActivated = activationState == .activated
+            #if os(watchOS)
+            self.isPhonePaired = activationState == .activated
+            #else
             self.isPhonePaired = session.isPaired
+            #endif
             self.isPhoneReachable = session.isReachable
             
             if let error = error {

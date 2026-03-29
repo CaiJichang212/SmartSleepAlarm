@@ -92,19 +92,22 @@ struct AlarmListView: View {
 }
 
 #Preview {
-    let config = ModelConfiguration(isStoredInMemoryOnly: true)
-    let container = try! ModelContainer(for: Alarm.self, configurations: config)
+    @Previewable @State var container: ModelContainer = {
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try! ModelContainer(for: Alarm.self, configurations: config)
+        
+        let alarm1 = Alarm(
+            time: Date(),
+            repeatDays: [1, 2, 3, 4, 5],
+            label: "工作日起床",
+            isEnabled: true,
+            isSmartModeEnabled: true
+        )
+        
+        container.mainContext.insert(alarm1)
+        return container
+    }()
     
-    let alarm1 = Alarm(
-        time: Date(),
-        repeatDays: [1, 2, 3, 4, 5],
-        label: "工作日起床",
-        isEnabled: true,
-        isSmartModeEnabled: true
-    )
-    
-    container.mainContext.insert(alarm1)
-    
-    return AlarmListView()
+    AlarmListView()
         .modelContainer(container)
 }

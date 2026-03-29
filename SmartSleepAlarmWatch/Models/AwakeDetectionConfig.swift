@@ -74,7 +74,7 @@ enum AwakeDetectionMode: String, Codable, CaseIterable {
     }
 }
 
-struct AwakeSignal: Equatable {
+struct AwakeSignal: Equatable, Codable {
     let timestamp: Date
     let type: AwakeSignalType
     let confidence: Double

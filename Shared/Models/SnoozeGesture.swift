@@ -29,9 +29,9 @@ enum SnoozeGesture: String, Codable, CaseIterable {
     var instruction: String {
         switch self {
         case .snap:
-            return "打响指贪睡"
+            return "打响指以贪睡"
         case .wristFlip:
-            return "翻转手腕贪睡"
+            return "翻转手腕以贪睡"
         }
     }
 }

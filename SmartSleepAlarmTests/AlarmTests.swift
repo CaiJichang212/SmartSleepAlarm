@@ -202,10 +202,10 @@ final class AlarmTests: XCTestCase {
         let ringtones = Alarm.defaultRingtones
         
         XCTAssertNotNil(ringtones["default"])
-        XCTAssertNotNil(ringtones["gentle"])
-        XCTAssertNotNil(ringtones["nature"])
-        XCTAssertNotNil(ringtones["classic"])
-        XCTAssertNotNil(ringtones["digital"])
+        XCTAssertNotNil(ringtones["gentle_wake"])
+        XCTAssertNotNil(ringtones["ocean_waves"])
+        XCTAssertNotNil(ringtones["classic_alarm"])
+        XCTAssertNotNil(ringtones["digital_beep"])
     }
     
     func testAlarmEquality() {

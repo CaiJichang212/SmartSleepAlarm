@@ -1,7 +1,7 @@
 import Foundation
 import Combine
 
-enum AlarmState {
+enum AlarmState: Equatable {
     case idle
     case scheduled(nextAlarmTime: Date)
     case triggered(alarmId: UUID, triggerTime: Date)

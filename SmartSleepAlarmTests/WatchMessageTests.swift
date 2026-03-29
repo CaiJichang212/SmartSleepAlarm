@@ -71,7 +71,7 @@ final class WatchMessageTests: XCTestCase {
     }
     
     func testWatchMessageTypeAllCases() {
-        XCTAssertEqual(WatchMessageType.allCases.count, 11)
+        XCTAssertEqual(WatchMessageType.allCases.count, 10)
         XCTAssertEqual(WatchMessageType.alarmDataSync.rawValue, "alarmDataSync")
         XCTAssertEqual(WatchMessageType.alarmStateUpdate.rawValue, "alarmStateUpdate")
         XCTAssertEqual(WatchMessageType.snoozeSettingsSync.rawValue, "snoozeSettingsSync")
